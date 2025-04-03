@@ -16,4 +16,10 @@ public class VerificadorPrimo {
         }
         return true;
     }
+    public static void main(String[] args) {
+        System.out.println("Teste com 2 (esperado true): " + ePrimo(2));
+        System.out.println("Teste com 10 (esperado false): " + ePrimo(10));
+        System.out.println("Teste com 13 (esperado true): " + ePrimo(13));
+        System.out.println("Teste com -5 (esperado false): " + ePrimo(-5));
+    }
 }

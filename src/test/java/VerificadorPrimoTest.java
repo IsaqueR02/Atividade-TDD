@@ -5,7 +5,9 @@
 
 import ex01.tdd.numprimos.VerificadorPrimo;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;/**
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
  *
  * @author rafaelamoreira
  */
@@ -33,5 +35,30 @@ public class VerificadorPrimoTest {
     @Test
     void deveRetornarFalseParaVinte() {
         assertFalse(VerificadorPrimo.ePrimo(20));
+    }
+
+    @Test
+    void deveRetornarFalseParaNumeroNegativo() {
+        assertFalse(VerificadorPrimo.ePrimo(-5));
+    }
+
+    @Test
+    void deveRetornarTrueParaNumeroPrimoGrande() {
+        assertTrue(VerificadorPrimo.ePrimo(7919)); // 7919 is a prime number
+    }
+
+    @Test
+    void deveRetornarFalseParaNumeroCompostoGrande() {
+        assertFalse(VerificadorPrimo.ePrimo(8000)); // 8000 is not a prime number
+    }
+
+    @Test
+    void deveRetornarTrueParaNumeroPrimoPequeno() {
+        assertTrue(VerificadorPrimo.ePrimo(3)); // 3 is a prime number
+    }
+
+    @Test
+    void deveRetornarFalseParaNumeroParMaiorQueDois() {
+        assertFalse(VerificadorPrimo.ePrimo(10)); // 10 is not a prime number
     }
 }
